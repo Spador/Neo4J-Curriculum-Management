@@ -4,10 +4,13 @@ on: [push, pull_request]
 jobs:
   backend:
     runs-on: ubuntu-latest
+
+    # Correctly indented env block
     env:
-  AURA_URI:      ${{ secrets.NEO4J_URI }}
-  AURA_USER:     ${{ secrets.NEO4J_USER }}
-  AURA_PASSWORD: ${{ secrets.NEO4J_PASS }}
+      AURA_URI:      ${{ secrets.NEO4J_URI }}
+      AURA_USER:     ${{ secrets.NEO4J_USER }}
+      AURA_PASSWORD: ${{ secrets.NEO4J_PASS }}
+
     steps:
       - uses: actions/checkout@v3
 
