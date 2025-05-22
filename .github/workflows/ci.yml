@@ -5,9 +5,9 @@ jobs:
   backend:
     runs-on: ubuntu-latest
     env:
-      NEO4J_URI:  ${{ secrets.NEO4J_URI }}
-      NEO4J_USER: ${{ secrets.NEO4J_USER }}
-      NEO4J_PASS: ${{ secrets.NEO4J_PASS }}
+  AURA_URI:      ${{ secrets.NEO4J_URI }}
+  AURA_USER:     ${{ secrets.NEO4J_USER }}
+  AURA_PASSWORD: ${{ secrets.NEO4J_PASS }}
     steps:
       - uses: actions/checkout@v3
 
